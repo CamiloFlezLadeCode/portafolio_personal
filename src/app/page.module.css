@@ -163,3 +163,14 @@
   text-decoration: underline;
 
 }
+
+.VerCurriculum {
+  margin-top: 20px;
+  background-color: #4f46e5;
+  /* height: 30px; */
+  width: auto;
+  padding: 10px 10px 10px 10px;
+  font-weight: bold;
+  border-radius: 12px;
+  border: solid white;
+}

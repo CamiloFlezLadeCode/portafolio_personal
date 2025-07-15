@@ -104,6 +104,16 @@ export default function Home(): React.JSX.Element {
             <li><strong>GitHub:</strong> <a href="https://github.com/CamiloFlezLadeCode" target="_blank">github.com/CamiloFlezLadeCode</a></li>
           </ul>
         </section>
+
+        <button className={styles.VerCurriculum}>
+          <a
+            href="/Juan Camilo Florez Laverde - Desarrollador - Nodejs - PHP.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Ver Curriculum
+          </a>
+        </button>
       </main>
 
       <footer className={styles.footer}>
