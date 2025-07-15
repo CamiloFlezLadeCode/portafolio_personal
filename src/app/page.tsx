@@ -1,94 +1,113 @@
-import Image from "next/image";
+'use client';
+import * as React from 'react';
 import styles from "./page.module.css";
 
-export default function Home() {
+export default function Home(): React.JSX.Element {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+        <header>
+          <h1>Camilo Florez Laverde</h1>
+          <p className={styles.typing}>Programador Web</p>
+        </header>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
+        <section>
+          <h2 className={styles.section_title}>Sobre mí</h2>
+          {/* <p>
+            Soy desarrollador full stack con experiencia en desarrollo web utilizando tecnologías como React, Next.js, Node.js y bases de datos SQL/NoSQL. Me apasiona crear soluciones limpias, eficientes y escalables.
+          </p> */}
+          <p style={{ textAlign: 'justify' }}>
+            Desarrollador Full Stack con más de 2 años de
+            experiencia creando soluciones web eficientes y
+            escalables. Apasionado por la resolución de
+            problemas y la optimización de la experiencia del
+            usuario. Especializado en desarrollo ágil, código
+            limpio y entrega de productos de alta calidad. He
+            trabajado en equipos colaborativos,
+            implementando soluciones innovadoras que
+            mejoran el rendimiento y la usabilidad. Busco
+            nuevos desafíos donde pueda aportar mi
+            experiencia y seguir creciendo en un entorno
+            dinámico y de alto impacto.
+          </p>
+        </section>
+
+        <section>
+          <h2 className={styles.section_title}>Proyectos destacados</h2>
+          <div className={styles.projects}>
+            <div className={styles.project}>
+              <h3>App para el monitoreo de equipos en tiempo real</h3>
+              <span className={styles.stack}>JavaScript, Nodejs, Express, MySQL, HTML, Bootstrap</span>
+              <p>
+                Aplicación completa para registrar, editar y controlar equipos en tiempo real.
+              </p>
+              <br />
+              <a href="" target="_black" className={styles.VerRepositorio}>VER_REPOSITORIO</a>
+            </div>
+            <div className={styles.project}>
+              <h3>Panel Administrativo basado en el alquiler y reparación de equipos para la construcción</h3>
+              <span className={styles.stack}>Next.js, MUI, MySQL, TypeScript, Node.js, Express</span>
+              <p>
+                Interfaz responsiva para manejo de equipos, inventario, clientes, usuarios, respuestos, proyectos, vehiculos, bodegas. Control de remisiones, devoluciones, ordenes de servicio, estado de cuenta de los clientes y estado de equipos (reparación / alquiler).
+              </p>
+              <br />
+              <a href="" target="_black" className={styles.VerRepositorio}>VER_REPOSITORIO</a>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 className={styles.section_title}>Tecnologías</h2>
+          <div className={styles.projects}>
+            <div className={styles.project}>
+              <h3>Lenguajes</h3>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>PHP</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Nodejs</li>
+              <li>React</li>
+            </div>
+            <div className={styles.project}>
+              <h3>Bases de datos</h3>
+              <li>SQl</li>
+              <li>MySQL,</li>
+              <li>PostgreSQL</li>
+              <li>MongoDB</li>
+            </div>
+            <div className={styles.project}>
+              <h3>Frameworks</h3>
+              <li>Nextjs</li>
+              <li>Laravel</li>
+              <li>Express</li>
+            </div>
+            <div className={styles.project}>
+              <h3>Herramientas y metodologías</h3>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>JWT</li>
+              <li>Axios</li>
+              <li>Scrum</li>
+              <li>Bootstrap</li>
+              <li>jQuery</li>
+              <li>VSCode</li>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2 className={styles.section_title}>Contacto</h2>
+          <ul className={styles.contact}>
+            <li><strong>Correo:</strong> camilodesarrollador@outlook.com</li>
+            <li><strong>Celular:</strong><span> 3124129625</span></li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/juan-camilo-florez-laverde-138ab9322/" target="_blank">linkedin.com/in/juan-camilo-florez-laverde</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/CamiloFlezLadeCode" target="_blank">github.com/CamiloFlezLadeCode</a></li>
+          </ul>
+        </section>
       </main>
+
       <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        © {new Date().getFullYear()} Camilo FlezLade. Todos los derechos reservados.
       </footer>
     </div>
   );
