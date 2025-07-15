@@ -67,7 +67,6 @@ export default function Home(): React.JSX.Element {
               <li>HTML5</li>
               <li>CSS3</li>
               <li>Nodejs</li>
-              <li>React</li>
             </div>
             <div className={styles.project}>
               <h3>Bases de datos</h3>
@@ -84,6 +83,7 @@ export default function Home(): React.JSX.Element {
             </div>
             <div className={styles.project}>
               <h3>Herramientas y metodologías</h3>
+              <li>React</li>
               <li>Git</li>
               <li>GitHub</li>
               <li>JWT</li>
