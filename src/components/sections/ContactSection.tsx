@@ -34,11 +34,13 @@ const MensajeAlerta: React.FC<MensajeAlertaProps> = ({
             onClose={onClose}
         >
             <Alert
+                variant="filled"
                 severity={tipo}
                 sx={{ width: '100%' }}
                 onClose={onClose}
             >
-                <strong style={{ color: '#000000' }}>{mensaje}</strong>
+                {/* <strong style={{ color: '#000000' }}>{mensaje}</strong> */}
+                <span className='text-white text-base'>{mensaje}</span>
             </Alert>
         </Snackbar>
     );
