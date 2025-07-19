@@ -10,6 +10,11 @@ import { MdOutlineEmail } from "react-icons/md";
 import { z as zod } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Controller, useForm } from 'react-hook-form';
+import emailjs from '@emailjs/browser';
+
+// Tipos para TypeScript
+type IdServicio = string;
+type IdPlantilla = string;
 
 interface MensajeAlertaProps {
     open: boolean;
@@ -94,19 +99,41 @@ const ContactSection = React.forwardRef<HTMLDivElement, SectionProps>(({ id }, r
     };
     // ...
     // Función para contactar / enviar correo
+    // Inicializa EmailJS al montar el componente
+    React.useEffect(() => {
+        emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_USER_ID!);
+    }, []);
+
     const EnviarCorreo = React.useCallback(
-        async (values: Values): Promise<void> => {
+        async (values: Values): Promise<void> => { // Usa el tipo Values de Zod
             setIsPending(true);
             try {
+                // Usa los mismos nombres que en tu schema
+                const { Nombre, Correo, Mensaje } = values;
+
+                await emailjs.send(
+                    process.env.NEXT_PUBLIC_ID_SERVICIO_EMAILJS!,
+                    process.env.NEXT_PUBLIC_ID_PLANTILLA_EMAILJS!,
+                    {
+                        title: "Nuevo mensaje de contacto - Portafolio Personal",
+                        name: Nombre, // Mapea correctamente a las variables de tu plantilla EmailJS
+                        email: Correo,
+                        message: Mensaje,
+                        time: new Date().toLocaleString(),
+                    }
+                );
+
                 mostrarMensaje('Mensaje enviado correctamente', 'success');
             } catch (error) {
-                mostrarMensaje(`Error al enviar el mensaje: ${error}`, 'error');
-                console.error(`Error al enviar el mensaje: ${error}`);
+                const errorMessage = error instanceof Error ? error.message : 'Error desconocido';
+                mostrarMensaje(`Error al enviar el mensaje: ${errorMessage}`, 'error');
+                console.error('Error detallado:', error);
+            } finally {
+                setIsPending(false);
             }
         },
-        [setError]
+        [setIsPending, mostrarMensaje]
     );
-    // ...
 
     return (
         <Box
@@ -202,21 +229,6 @@ const ContactSection = React.forwardRef<HTMLDivElement, SectionProps>(({ id }, r
                                         </FormControl>
                                     )}
                                 />
-
-                                {/* <Controller
-                                    control={control}
-                                    name='Mensaje'
-                                    render={({ field }) => (
-                                        <FormControl error={Boolean(errors.Mensaje)} sx={{ width: '100%' }}>
-                                            <TextareaAutosize
-                                                {...field}
-                                                minRows={5}
-                                                placeholder='Mensaje'
-                                            />
-                                            {errors.Mensaje ? <FormHelperText sx={{ margin: 0 }}>{errors.Mensaje.message}</FormHelperText> : null}
-                                        </FormControl>
-                                    )}
-                                /> */}
                                 <Controller
                                     control={control}
                                     name="Mensaje"
