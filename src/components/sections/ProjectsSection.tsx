@@ -92,14 +92,25 @@ const ProjectsSection = forwardRef<HTMLDivElement, SectionProps>(({ id }, ref) =
                     <Divider />
                     <CardContent>
                         <strong>Tecnologías: </strong><span>Nodejs, Express, JWT, Nextjs, TypeScript, Material MUI</span>
-                        <p>
-
+                        <p className='w-100% text-justify'>
+                            Panel administrativo para la gestión de una empresa dedicada al alquiler y reparación de equipos para la construcción.
                         </p>
+                        <strong>Modulos:</strong>
+                        <li>Ordenes de servicio</li>
+                        <li>Remisiones</li>
+                        <li>Devoluciones</li>
+                        <li>Equipos</li>
+                        <li>Bodegas</li>
+                        <li>Usuarios</li>
+                        <li>Proyectos</li>
+                        <li>Repuestos</li>
+                        <li>Vehículos</li>
+                        <li>Ajustes de cuenta</li>
                         <Box>
-                            <IconButton sx={{ color: '#000000' }} title='Visitar repositorio' target='__blank' href=''>
+                            <IconButton sx={{ color: '#000000' }} title='Visitar repositorio' target='__blank' href='https://github.com/CamiloFlezLadeCode/Admin-Tecni-Servicios-BackEnd'>
                                 <SiGithub size={30} />
                             </IconButton>
-                            <IconButton sx={{ color: '#000000' }} title='Visitar repositorio' target='__blank' href=''>
+                            <IconButton sx={{ color: '#000000' }} title='Visitar repositorio' target='__blank' href='https://github.com/CamiloFlezLadeCode/Admin-Tecni-Servicios'>
                                 <SiGithub size={30} />
                             </IconButton>
                         </Box>
