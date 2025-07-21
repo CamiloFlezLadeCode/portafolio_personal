@@ -133,7 +133,7 @@ const TechnologiesSection = forwardRef<HTMLDListElement, SectionProps>(({ id }, 
                         }}
                     >
                         <Item nombre="MySQL" Icono={SiMysql} />
-                        <Item nombre="PosgreSQL" Icono={SiPostgresql} />
+                        <Item nombre="PostgreSQL" Icono={SiPostgresql} />
                         <Item nombre="SQLite" Icono={SiSqlite} />
                         <Item nombre="SQL" Icono={FaDatabase} />
                         <Item nombre="MongoDB" Icono={SiMongodb} />
