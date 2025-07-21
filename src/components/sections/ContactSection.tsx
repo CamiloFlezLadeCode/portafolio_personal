@@ -1,16 +1,16 @@
 'use client';
 // import React, { forwardRef, useCallback } from 'react';
+import { Alert, AlertColor, Box, Button, Card, CardContent, FormControl, FormHelperText, IconButton, Input, Snackbar, TextareaAutosize, Typography } from '@mui/material';
 import * as React from 'react';
-import { IconButton, Box, Typography, Card, CardHeader, CardContent, Divider, Input, TextareaAutosize, Button, Alert, AlertColor, Snackbar, FormControl, OutlinedInput, FormHelperText } from '@mui/material';
+import { MdOutlineEmail } from "react-icons/md";
 import {
     SiLinkedin
 } from 'react-icons/si';
-import { MdOutlineEmail } from "react-icons/md";
 // Herramientas para validaciones de formularios
-import { z as zod } from 'zod';
+import emailjs from '@emailjs/browser';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Controller, useForm } from 'react-hook-form';
-import emailjs from '@emailjs/browser';
+import { z as zod } from 'zod';
 
 // Tipos para TypeScript
 type IdServicio = string;
@@ -171,7 +171,8 @@ const ContactSection = React.forwardRef<HTMLDivElement, SectionProps>(({ id }, r
                 <Typography
                     variant='h4'
                     sx={{
-                        fontWeight: 'bold'
+                        fontWeight: 'bold',
+                        filter: 'drop-shadow(1px 1px 10px #9c27b0)'
                     }}
                 >
                     Contáctame

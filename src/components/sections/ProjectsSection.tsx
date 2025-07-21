@@ -1,6 +1,7 @@
 'use client';
 import React, { forwardRef } from 'react';
-import { Box, Typography, Card, CardHeader, CardContent, Divider } from '@mui/material';
+import { Box, Typography, Card, CardHeader, CardContent, Divider, IconButton } from '@mui/material';
+import { SiGithub } from 'react-icons/si';
 
 interface SectionProps {
     id: string;
@@ -38,12 +39,13 @@ const ProjectsSection = forwardRef<HTMLDivElement, SectionProps>(({ id }, ref) =
                     height: '40px',
                     bgcolor: 'secondary.main',
                     mr: .5,
-                    borderRadius: '2px'
+                    borderRadius: '2px',
                 }} />
                 <Typography
                     variant='h4'
                     sx={{
-                        fontWeight: 'bold'
+                        fontWeight: 'bold',
+                        filter: 'drop-shadow(1px 1px 10px #9c27b0)'
                     }}
                 >
                     Proyectos
@@ -65,11 +67,18 @@ const ProjectsSection = forwardRef<HTMLDivElement, SectionProps>(({ id }, ref) =
                     }}
                 >
                     <CardHeader
-                        title='App para el monitoreo de equipos en tiempo real'
+                        title='Aplicación para la longevidad de la batería de la laptop'
                     />
                     <Divider />
                     <CardContent>
-
+                        <strong>Tecnologías: </strong><span>Python, Twilio, smtplib, psutil</span>
+                        <p className='w-100% text-justify'>
+                            Aplicación de escritorio que se encarga de analizar el estado de la batería. Si la batería se encuentra cargando y en porcentaje 100,
+                            se muestra una notificación en la laptop para que sea desconectado el cargador, además realiza envío de email y sms; alertando que la batería llegó a su límite de carga.
+                        </p>
+                        <IconButton sx={{ color: '#000000' }} title='Visitar repositorio' target='__blank' href='https://github.com/CamiloFlezLadeCode/longevidad_bateria_laptop'>
+                            <SiGithub size={30} />
+                        </IconButton>
                     </CardContent>
                 </Card>
                 <Card
@@ -82,7 +91,33 @@ const ProjectsSection = forwardRef<HTMLDivElement, SectionProps>(({ id }, ref) =
                     />
                     <Divider />
                     <CardContent>
+                        <strong>Tecnologías: </strong><span>Nodejs, Express, JWT, Nextjs, TypeScript, Material MUI</span>
+                        <p>
 
+                        </p>
+                        <Box>
+                            <IconButton sx={{ color: '#000000' }} title='Visitar repositorio' target='__blank' href=''>
+                                <SiGithub size={30} />
+                            </IconButton>
+                            <IconButton sx={{ color: '#000000' }} title='Visitar repositorio' target='__blank' href=''>
+                                <SiGithub size={30} />
+                            </IconButton>
+                        </Box>
+                    </CardContent>
+                </Card>
+                <Card
+                    sx={{
+                        width: '100%'
+                    }}
+                >
+                    <CardHeader title='Sitio web personal' />
+                    <Divider />
+                    <CardContent>
+                        <strong>Tecnologías: </strong><span>Nextjs, Material MUI, Tailwindcss, TypeScript, Emailjs</span>
+                        <p className='w-100% text-justify'></p>
+                        <IconButton sx={{ color: '#000000' }} title='Visitar repositorio' target='__blank' href='https://github.com/CamiloFlezLadeCode/portafolio_personal'>
+                            <SiGithub size={30} />
+                        </IconButton>
                     </CardContent>
                 </Card>
             </Box>

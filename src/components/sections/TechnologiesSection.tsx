@@ -76,7 +76,8 @@ const TechnologiesSection = forwardRef<HTMLDListElement, SectionProps>(({ id }, 
                 <Typography
                     variant='h4'
                     sx={{
-                        fontWeight: 'bold'
+                        fontWeight: 'bold',
+                        filter: 'drop-shadow(1px 1px 10px #9c27b0)'
                     }}
                 >
                     Tecnologías

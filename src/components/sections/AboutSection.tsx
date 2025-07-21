@@ -1,6 +1,6 @@
 'use client';
-import React, { forwardRef } from 'react';
-import { Typography, Box, Paper, Card, CardContent, CardActions, Avatar } from '@mui/material';
+import { Avatar, Box, Card, CardContent, Typography } from '@mui/material';
+import { forwardRef } from 'react';
 
 interface SectionProps {
     id: string;
@@ -76,7 +76,8 @@ const AboutSection = forwardRef<HTMLDivElement, SectionProps>(({ id }, ref) => {
                 <Typography
                     variant='h4'
                     sx={{
-                        fontWeight: 'bold'
+                        fontWeight: 'bold',
+                        filter: 'drop-shadow(1px 1px 10px #9c27b0)'
                     }}
                 >
                     Sobre mi
@@ -98,8 +99,13 @@ const AboutSection = forwardRef<HTMLDivElement, SectionProps>(({ id }, ref) => {
                     sx={{
                         width: 150,
                         height: 150,
-                        border: '2px solid',
-                        borderColor: 'success.main'
+                        // border: '2px solid',
+                        // borderColor: 'success.main',
+                        // boxShadow: '1px 1px 20px #9c27b0',
+                        // borderColor: 'primary.main',
+                        // filter: 'drop-shadow(1px 1px 20px #9c27b0)',
+                        boxShadow: '1px 1px 5px green',
+                        filter: 'drop-shadow(1px 1px 20px #15b79e)'
                     }}
                     src='/foto_personal.jpeg'
                 />
