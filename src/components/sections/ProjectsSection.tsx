@@ -91,7 +91,7 @@ const ProjectsSection = forwardRef<HTMLDivElement, SectionProps>(({ id }, ref) =
                     />
                     <Divider />
                     <CardContent>
-                        <strong>Tecnologías: </strong><span>Nodejs, Express, JWT, Nextjs, TypeScript, Material MUI</span>
+                        <strong>Tecnologías: </strong><span>Nodejs, Express, JWT, Nextjs, TypeScript, Material MUI, MySQL</span>
                         <p className='w-100% text-justify'>
                             Panel administrativo para la gestión de una empresa dedicada al alquiler y reparación de equipos para la construcción.
                         </p>
