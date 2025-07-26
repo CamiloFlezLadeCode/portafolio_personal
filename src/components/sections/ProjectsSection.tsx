@@ -110,7 +110,7 @@ const ProjectsSection = forwardRef<HTMLDivElement, SectionProps>(({ id }, ref) =
                             <IconButton sx={{ color: '#000000' }} title='Visitar repositorio' target='__blank' href='https://github.com/CamiloFlezLadeCode/Admin-Tecni-Servicios-BackEnd'>
                                 <SiGithub size={30} />
                             </IconButton>
-                            <IconButton sx={{ color: '#000000' }} title='Visitar repositorio' target='__blank' href='https://github.com/CamiloFlezLadeCode/Admin-Tecni-Servicios'>
+                            <IconButton sx={{ color: '#000000' }} title='Visitar repositorio' target='__blank' href='https://github.com/CamiloFlezLadeCode/Admin-Tecni-Servicios-FrontEnd'>
                                 <SiGithub size={30} />
                             </IconButton>
                         </Box>
