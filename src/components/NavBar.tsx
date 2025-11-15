@@ -49,7 +49,7 @@ export default function NavBar(): React.JSX.Element {
                 <Button
                     fullWidth
                     variant="outlined"
-                    href="./HV_CAMILO.pdf"
+                    href="./HV_CAMILO_organized.pdf"
                     target="_blank"
                     title='Ver CV'
                 >
@@ -134,7 +134,7 @@ export default function NavBar(): React.JSX.Element {
                         )}
                         <Button
                             variant="outlined"
-                            href="./HV_CAMILO.pdf"
+                            href="./HV_CAMILO_organized.pdf"
                             target="_blank"
                             title='Ver CV'
                         >
