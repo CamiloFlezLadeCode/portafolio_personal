@@ -28,6 +28,8 @@ import {
     SiBootstrap,
     SiTailwindcss,
     SiJquery,
+    SiNestjs,
+    SiAngular
 } from 'react-icons/si';
 import { FaDatabase } from 'react-icons/fa';
 import { VscVscode } from "react-icons/vsc";
@@ -157,6 +159,8 @@ const TechnologiesSection = forwardRef<HTMLDListElement, SectionProps>(({ id }, 
                         <Item nombre="Nextjs" Icono={SiNextdotjs} />
                         <Item nombre="Laravel" Icono={SiLaravel} />
                         <Item nombre="Express" Icono={SiExpress} />
+                        <Item nombre="Nestjs" Icono={SiNestjs} />
+                        <Item nombre="Angular" Icono={SiAngular} />
                     </CardContent>
                 </Card>
                 <Card
